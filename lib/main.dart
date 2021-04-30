@@ -20,11 +20,8 @@ final expando = Expando('john');
 
 void main() {
   final person = functionName();
-  print(person.hashCode);
-  print(person.name);
 
-  print('---');
-
+  // Should always print `null` but after a hot-restart, will print "42"
   print(expando[person]);
 
   expando[person] = 42;
